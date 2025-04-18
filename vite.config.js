@@ -1,8 +1,6 @@
-import { defineConfig } from 'vite';
-
-export default defineConfig({
+// vite.config.js
+module.exports = {
   preview: {
-    port: process.env.PORT || 4173,
-    host: '0.0.0.0'
+    port: parseInt(process.env.PORT) || 4173
   }
-});
+};
