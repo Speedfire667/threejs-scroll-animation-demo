@@ -1,14 +1,9 @@
-// vite.config.js
-module.exports = {
-  build: {
-    outDir: 'dist',
-    rollupOptions: {
-      input: 'index.html'
-    }
-  },
-  preview: {
-    port: parseInt(process.env.PORT) || 4173,
-    host: '0.0.0.0',
-    open: true, // Vai abrir a URL automaticamente no navegador
-  }
-};
+import { GLTFLoader } from 'https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js';
+
+// Carregar modelo .glb
+const loader = new GLTFLoader();
+loader.load('model.glb', (gltf) => {
+  const model = gltf.scene;
+  scene.add(model);
+  model.scale.set(2, 2, 2); // Ajuste o tamanho do modelo conforme necessário
+});
