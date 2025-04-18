@@ -12,4 +12,7 @@
   "dependencies": {
     "three": "^0.128.0"
   }
+  "scripts": {
+  "dev": "vite --port 3000"
+  }
 }
